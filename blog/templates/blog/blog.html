@@ -1,0 +1,23 @@
+{% load staticfiles %}
+{% include 'home/header.html'%}
+
+<h1 class="text-center" style="overflow-y:hidden;">New Posts</h1>
+    <div class="container">
+		<div class="container">
+			<div class="container">
+				<div class="container ">
+		
+					{% block content %}  
+						{% for post in object_list %}
+							<h4>{{post.date|date:"Y-m-d"}}<a href="/blog/{{post.id}}">{{post.title}}</a></h4>
+						
+						{% endfor %}
+					{% endblock %}
+        
+	
+				</div>
+			</div>
+		</div
+	</div>
+</div>
+{% include 'home/footer.html'%}
