@@ -8,7 +8,10 @@
 				<div class="container ">
 		
 					{% block content %}  
-						
+						<h3 class="text-center"><b>{{post.title}}</b></h3>
+						<br>
+						<h6><b>Published On:</b>{{post.date}}</h6>
+						<p>{{post.body|safe|linebreaks}}</p>
 
 					{% endblock %}
         
