@@ -24,6 +24,6 @@ urlpatterns = [
     url(r'^gallery/', include('gallery.urls')),
     url(r'^home/', include('home.urls')),
     url(r'^blog/', include('blog.urls')),
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
